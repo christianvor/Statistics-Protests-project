@@ -1,0 +1,22 @@
+---
+title: "Project Report Statistics"
+subtitle: "Protests"
+author: "Chrsitian Vorhauser"
+---
+
+# Describing the data and and what to do
+
+The dataset I chose for my project includes 300 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
+
+The variables available for each of the campaigns include the participation of the population in percent and the absolute number of participants during the height of it.
+
+# describing the data processing and changes i made
+
+
+# a full model and looking at submodels
+
+
+# diagnostics of the model
+
+# conclusions
+
