@@ -1,0 +1,302 @@
+,,,https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MHOXDV,,,,,,,,
+campaign,participants as % population,Success?,MAX of participants,ID,Year of max involvement,First year of campaign,Last year of camapaign,Location,Pop in that year,greater than 3.5% of pop involved?,Problem?
+Singing Revolution,128.85%,TRUE,"2,000,000",202,1987,1987,1991,Estonia,"1,552,221",TRUE,chill
+Aruba Pro-Independence Campaign,99.39%,FALSE,"60,000",254,1977,1977,1977,Aruba,"60,366",TRUE,PROBLEM
+Latvia pro-dem movement,74.99%,TRUE,"2,000,000",127,1989,1989,1991,Latvia,"2,666,955",TRUE,chill
+Uruguay Anti-Military,66.84%,TRUE,"2,000,001",239,1984,1984,1985,Uruguay,"2,992,246",TRUE,chill
+Czech Anti-Soviet Occupation,35.52%,FALSE,"3,500,000",64,1967,1967,1968,Czechoslovakia,"9,852,899",TRUE,PROBLEM
+Argentina pro-democracy movement,33.76%,TRUE,"9,000,000",33,1977,1977,1983,Argentina,"26,661,398",TRUE,chill
+Zambia Anti-occupation,32.57%,TRUE,"1,000,000",249,1960,1960,1963,Zambia,"3,070,776",TRUE,chill
+Anti-Noriega,32.35%,FALSE,"750,000",24,1987,1987,1989,Panama,"2,318,264",TRUE,PROBLEM
+Cedar Revolution,31.92%,TRUE,"1,500,000",53,2005,2005,2005,Lebanon,"4,698,763",TRUE,chill
+Timorese Independence Campaign,31.79%,TRUE,"200,000",230,1975,1975,1999,East Timor,"629,227",TRUE,chill
+Solidarity,28.11%,TRUE,"10,000,000",206,1980,1980,1989,Poland,"35,574,150",TRUE,chill
+Anjouan Separatist Movement,26.90%,FALSE,"135,021",367,1997,1997,2000,Comoros,"501,953",TRUE,PROBLEM
+Bolivian Anti-Junta,19.56%,TRUE,"1,000,000",43,1976,1976,1982,Bolivia,"5,113,456",TRUE,chill
+Velvet Revolution,19.30%,TRUE,"2,000,001",240,1989,1989,1989,Czechoslovakia,"10,361,068",TRUE,chill
+South Africa Second Defiance Campaign,14.01%,TRUE,"4,000,000",211,1980,1980,1994,South Africa,"28,556,769",TRUE,chill
+Sajudis/ Lithuanian pro-democracy movement/,13.68%,TRUE,"500,000",190,1988,1988,1991,Lithuania,"3,655,049",TRUE,chill
+Sacred Union,12.53%,FALSE,"4,500,000",189,1991,1991,1995,Democratic Republic of Congo,"35,908,244",TRUE,PROBLEM
+Zambia Anti-Single Party,12.44%,TRUE,"1,000,001",248,1990,1990,1991,Zambia,"8,036,845",TRUE,chill
+Anti-King Hamad Campaign,11.74%,FALSE,"150,000",255,2011,2011,2013,Bahrain,"1,278,151",TRUE,PROBLEM
+Anti-Jaafar,11.62%,TRUE,"2,000,000",18,1985,1985,1985,Sudan,"17,210,187",TRUE,chill
+Carnation Revolution,11.58%,TRUE,"1,000,001",52,1973,1973,1974,Portugal,"8,633,100",TRUE,chill
+Albania Anti-Communist,9.29%,TRUE,"300,000",5,1989,1989,1991,Albania,"3,227,943",TRUE,chill
+Anti-Ali Abdullah Saleh,8.40%,TRUE,"2,000,001",316,2011,2011,2012,Yemen,"23,807,588",TRUE,chill
+Iranian Revolution,6.83%,TRUE,"2,000,000",104,1971,1971,1979,Iran,"29,281,591",TRUE,chill
+Anti-Pinochet Movement,6.30%,TRUE,"750,000",26,1983,1983,1989,Chile,"11,907,960",TRUE,chill
+Frente Nacionalæde Resistencia Popular (FNRP),6.13%,FALSE,"500,000",266,2009,2009,2011,Honduras,"8,150,775",TRUE,PROBLEM
+Madagasar pro-democracy movement,5.96%,TRUE,"1,000,000",130,2002,2002,2002,Madagascar,"16,765,117",TRUE,chill
+Nepalese Anti-government,5.37%,TRUE,"1,400,000",149,2006,2006,2006,Nepal,"26,066,693",TRUE,chill
+Anti-Gayoom,4.96%,TRUE,"15,000",17,2003,2003,2008,Maldives,"302,683",TRUE,chill
+Tongan Pro-Democracy Protests,4.96%,FALSE,"5,000",310,2005,2005,2006,Tonga,"100,905",TRUE,PROBLEM
+Anti-Khan,4.54%,FALSE,"2,500,000",21,1968,1968,1969,Pakistan,"55,102,684",TRUE,PROBLEM
+Brunei Revolt,4.47%,FALSE,"4,000",383,1962,1962,1962,Brunei,"89,481",TRUE,PROBLEM
+Lebanon Political Crisis,4.20%,TRUE,"200,001",321,2006,2006,2008,Lebanon,"4,759,753",TRUE,chill
+Royalists,4.02%,FALSE,"220,000",184,1962,1962,1969,Yemen Arab Republic,"5,473,671",TRUE,PROBLEM
+People Power,3.89%,TRUE,"2,000,000",169,1983,1983,1986,Philippines,"51,408,912",TRUE,chill
+Hizballah,3.84%,FALSE,"100,000",90,1982,1982,2000,Lebanon,"2,606,139",TRUE,PROBLEM
+Anti-Milosevic,3.61%,TRUE,"275,000",23,1996,1996,2000,Serbia,"7,617,794",TRUE,chill
+Khmer Rouge,3.58%,TRUE,"205,001",117,1960,1960,1975,Cambodia,"5,722,370",TRUE,chill
+Nigeria Anti-Military,3.41%,TRUE,"3,500,000",152,1993,1993,1998,Nigeria,"102,700,753",FALSE,chill
+Active Forces,3.35%,TRUE,"400,000",1,1991,1991,1993,Madagascar,"11,942,819",FALSE,chill
+Cultural Revolution Red Guards,2.99%,FALSE,"22,000,000",63,1966,1966,1968,China,"735,400,000",FALSE,chill
+Green Revolution and Day of Rage,2.74%,FALSE,"2,000,000",333,2009,2009,2013,Iran,"72,924,837",FALSE,chill
+Anti-Eyadema,2.59%,FALSE,"100,001",285,1991,1991,1991,Togo,"3,862,992",FALSE,chill
+Second People Power Movement,2.56%,TRUE,"2,000,000",194,2000,2000,2001,Philippines,"77,991,755",FALSE,chill
+Anti-Mubarak Movement,2.56%,TRUE,"2,000,000",331,2007,2007,2011,Egypt,"78,232,126",FALSE,chill
+Anti-Chaudry Campaign,2.47%,TRUE,"20,000",264,2000,2000,2000,Fiji,"811,006",FALSE,chill
+Anti-Aziz Protests,2.43%,FALSE,"80,000",339,2008,2008,2013,Mauritania,"3,296,238",FALSE,chill
+South Korea Anti-Military,2.40%,TRUE,"1,000,001",213,1987,1987,1987,South Korea,"41,621,690",FALSE,chill
+Islamic Salvation Front,2.39%,FALSE,"600,000",106,1989,1989,2013,Algeria,"25,106,190",FALSE,chill
+Djibouti Arab Spring,2.34%,FALSE,"20,000",260,2011,2011,2011,Djibouti,"853,674",FALSE,chill
+Serb militias,2.29%,FALSE,"100,000",196,1991,1991,1995,Bosnia-Herzegovina,"4,369,319",FALSE,chill
+Anti-Morsi Protests,2.26%,TRUE,"2,000,001",262,2013,2013,2013,Egypt,"88,404,640",FALSE,chill
+Greece Anti-Military,2.24%,TRUE,"200,001",89,1973,1973,1974,Greece,"8,929,086",FALSE,chill
+Cutlery Revolution,2.21%,TRUE,"7,000",298,2008,2008,2009,Iceland,"317,414",FALSE,chill
+Taliban/ Anti-Government Forces,2.18%,TRUE,"316,000",218,1992,1992,1996,Afghanistan,"14,485,546",FALSE,chill
+Anti-Shashkvilli Campaign,2.07%,TRUE,"80,000",332,2007,2007,2013,Georgia,"3,860,158",FALSE,chill
+Orange Revolution,2.05%,TRUE,"1,000,000",159,2001,2001,2004,Ukraine,"48,683,865",FALSE,chill
+Palestinian activists,2.03%,FALSE,"35,000",165,1970,1970,1970,Jordan,"1,721,323",FALSE,chill
+Georgia-Abkhazia War,1.99%,FALSE,"97,000",329,1992,1992,1994,Georgia,"4,873,500",FALSE,chill
+Belarus Anti-Communist,1.97%,TRUE,"200,000",38,1988,1988,1991,Belarus,"10,140,000",FALSE,chill
+Anti-Ceaucescu Rebels,1.94%,TRUE,"450,000",11,1989,1989,1989,Romania,"23,161,458",FALSE,chill
+Third Southern Ossetian Separatist Campaign,1.90%,TRUE,"73,000",434,2008,2008,2008,Georgia,"3,848,449",FALSE,chill
+Anti-Ben Ali Campaign (Jasmine Revolution),1.88%,TRUE,"200,001",311,2010,2010,2011,Tunisia,"10,635,244",FALSE,chill
+Mongolian Anti-communist,1.87%,TRUE,"40,000",138,1989,1989,1990,Mongolia,"2,141,011",FALSE,chill
+PAIGC,1.81%,TRUE,"11,500",160,1963,1963,1974,Guinea-Bissau,"635,011",FALSE,chill
+Anti-Gnassingbe/Coup Crisis,1.78%,FALSE,"100,000",286,2005,2005,2005,Togo,"5,611,640",FALSE,chill
+Euromaiden,1.76%,FALSE,"800,001",314,2013,2013,2013,Ukraine,"45,489,600",FALSE,chill
+NPFL & ULIMO,1.75%,FALSE,"35,000",143,1992,1992,1995,Liberia,"2,001,624",FALSE,chill
+SWAPO,1.58%,TRUE,"9,999",188,1960,1960,1988,Namibia,"634,142",FALSE,chill
+Diretas ja,1.55%,FALSE,"2,000,001",68,1983,1983,1984,Brazil,"129,448,819",FALSE,chill
+Anti-National Governing Council (CNG),1.54%,FALSE,"100,001",296,1986,1986,1987,Haiti,"6,478,541",FALSE,chill
+Nasheed Supporters,1.51%,FALSE,"6,000",303,2012,2012,2013,Maldives,"397,237",FALSE,chill
+Let's Save Togo (Anti-Gnassingbe),1.48%,FALSE,"100,000",309,2012,2012,2013,Togo,"6,773,807",FALSE,chill
+Anti-Tsiranana Campaign,1.44%,TRUE,"100,000",271,1972,1972,1972,Madagascar,"6,946,620",FALSE,chill
+National Patriotic Forces,1.39%,FALSE,"30,000",147,1996,1996,1996,Liberia,"2,160,478",FALSE,chill
+CPN-M/UPF,1.36%,TRUE,"300,000",50,1996,1996,2006,Nepal,"22,090,352",FALSE,chill
+Public Against Violence,1.33%,TRUE,"70,000",179,1989,1989,1992,Slovakia,"5,275,942",FALSE,chill
+Argentina coup plot,1.28%,TRUE,"400,000",32,1987,1987,1987,Argentina,"31,184,415",FALSE,chill
+Syrian Civil Conflict,1.19%,FALSE,"250,000",282,2011,2011,2013,Syria,"21,082,966",FALSE,chill
+Mali Anti-Military,1.18%,TRUE,"100,000",132,1990,1990,1992,Mali,"8,449,913",FALSE,chill
+Anti-balaka,1.12%,FALSE,"50,000",361,2013,2013,2013,Central African Republic,"4,447,942",FALSE,chill
+Pro-French Nationalists,1.07%,FALSE,"500,000",178,1960,1960,1962,France,"46,621,669",FALSE,chill
+The Stir,1.06%,TRUE,"200,000",224,1990,1990,1990,Nepal,"18,905,478",FALSE,chill
+Sierra Leone Civil War,1.03%,FALSE,"45,000",180,1991,1991,2002,Sierra Leone,"4,348,660",FALSE,chill
+al-Houthi Rebellion,1.02%,FALSE,"200,001",258,2004,2004,2013,Yemen,"19,540,098",FALSE,chill
+Anti-Calderon,1.02%,FALSE,"1,100,000",10,2006,2006,2006,Mexico,"107,560,153",FALSE,chill
+Kurdish rebellion,1.00%,FALSE,"75,000",122,1961,1961,1975,Iraq,"7,475,350",FALSE,chill
+Slovenian Independence,1.00%,TRUE,"20,000",205,1991,1991,1991,Slovenia,"1,999,429",FALSE,chill
+Thai student protests,1.00%,TRUE,"400,000",223,1973,1973,1973,Thailand,"40,159,582",FALSE,chill
+Guinean Pro-Democracy Movement,0.99%,TRUE,"94,001",327,2007,2007,2010,Guinea,"9,518,162",FALSE,chill
+Tulip Revolution,0.97%,TRUE,"50,000",231,2005,2005,2005,Kyrgyzstan,"5,162,600",FALSE,chill
+Iraqi insurgency,0.96%,FALSE,"245,000",105,2003,2003,2013,Iraq,"25,644,499",FALSE,chill
+Hungary pro-dem movement,0.95%,TRUE,"100,000",95,1989,1989,1989,Hungary,"10,481,719",FALSE,chill
+Anti-Roh Tae Woo,0.95%,FALSE,"400,000",336,1988,1988,1992,South Korea,"42,031,247",FALSE,chill
+Anti-Fujimori,0.94%,TRUE,"250,000",16,2000,2000,2000,Peru,"26,459,944",FALSE,chill
+UNITA,0.93%,FALSE,"65,000",237,1975,1975,2002,Angola,"7,024,000",FALSE,chill
+Bulgaria Anti-Communist,0.90%,TRUE,"80,000",47,1989,1989,1990,Bulgaria,"8,876,972",FALSE,chill
+"Military Junta for the Consolidation of Democracy, Peace and Justice",0.87%,TRUE,"10,000",400,1998,1998,1999,Guinea-Bissau,"1,154,371",FALSE,chill
+Thai pro-dem movement,0.86%,TRUE,"500,000",222,1992,1992,1992,Thailand,"57,811,021",FALSE,chill
+Anti-Siles Zuazo,0.83%,FALSE,"50,000",289,1984,1984,1985,Bolivia,"6,054,123",FALSE,chill
+anti-coup Venezuelan campaign,0.80%,TRUE,"200,000",252,2002,2002,2002,Venezuela,"25,100,408",FALSE,chill
+LTTE,0.77%,FALSE,"100,001",125,1972,1972,2009,Sri Lanka,"13,002,231",FALSE,chill
+Rose Revolution,0.76%,TRUE,"30,000",183,2003,2003,2003,Georgia,"3,951,736",FALSE,chill
+Basque Campaign for Self-Determination,0.75%,FALSE,"250,000",73,1968,1968,2013,Spain,"33,113,134",FALSE,chill
+Afar insurgency,0.74%,FALSE,"4,500",2,1991,1991,1994,Djibouti,"606,844",FALSE,chill
+Maoist Anti-Government Protests,0.74%,TRUE,"200,001",274,2010,2010,2010,Nepal,"27,013,212",FALSE,chill
+Second Khmer Rouge,0.74%,FALSE,"50,000",193,1979,1979,1997,Cambodia,"6,770,396",FALSE,chill
+Rebellion of the Forajidos,0.72%,TRUE,"100,001",261,2005,2005,2005,Ecuador,"13,825,847",FALSE,chill
+CCCN and Union Pro-Democracy Movement,0.71%,TRUE,"20,000",325,1990,1990,1993,Central African Republic,"2,806,734",FALSE,chill
+Third Hutu Rebellion,0.70%,FALSE,"39,000",225,1991,1991,2008,Burundi,"5,564,926",FALSE,chill
+Benin Anti-Communist,0.70%,TRUE,"33,500",41,1989,1989,1990,Benin,"4,820,016",FALSE,chill
+Armenian Opposition Protest/March 1st Movement,0.69%,FALSE,"20,001",318,2008,2008,2009,Armenia,"2,907,618",FALSE,chill
+Contras,0.69%,TRUE,"22,373",57,1980,1980,1990,Nicaragua,"3,265,519",FALSE,chill
+Students Union Protests,0.67%,TRUE,"350,000",287,1990,1990,1990,Ukraine,"51,892,000",FALSE,chill
+FSLN,0.65%,TRUE,"20,001",80,1978,1978,1979,Nicaragua,"3,077,866",FALSE,chill
+Serbian Republic of Krajina,0.64%,FALSE,"30,000",391,1991,1991,1995,Croatia,"4,689,022",FALSE,chill
+Anti-Bouterse,0.61%,TRUE,"2,200",307,1983,1983,1984,Suriname,"362,276",FALSE,chill
+Anti-Duvalier,0.59%,TRUE,"37,500",15,1985,1985,1986,Haiti,"6,337,273",FALSE,chill
+Pinochet-led rebels,0.58%,TRUE,"60,000",170,1973,1973,1973,Chile,"10,265,829",FALSE,chill
+Anti-Sanchez de Lozada Campaign,0.56%,TRUE,"50,001",257,2003,2003,2003,Bolivia,"8,905,823",FALSE,chill
+LURD,0.56%,TRUE,"15,000",126,1999,1999,2003,Liberia,"2,699,712",FALSE,chill
+Somalia clan factions (SNM),0.55%,TRUE,"36,350",208,1982,1982,1991,Somalia,"6,608,044",FALSE,chill
+South Korea Anti-Junta,0.53%,FALSE,"200,000",212,1979,1979,1980,South Korea,"37,534,236",FALSE,chill
+Anti-Bozize/Seleka,0.52%,TRUE,"20,000",360,2003,2003,2013,Central African Republic,"3,881,181",FALSE,chill
+"FLOSY, NLF in Aden",0.51%,TRUE,"27,000",79,1960,1960,1967,Yemen,"5,315,355",FALSE,chill
+Druze resistance,0.51%,FALSE,"20,000",71,1981,1981,1982,Israel,"3,956,000",FALSE,chill
+Popular Front for the Liberation of Oman and the Arab Gulf (PFLOAG),0.49%,FALSE,"3,000",175,1964,1964,1976,Oman,"608,889",FALSE,chill
+Frolinat,0.47%,TRUE,"16,000",85,1966,1966,1990,Chad,"3,372,189",FALSE,chill
+Southern Yemen Secessionist Movement,0.47%,FALSE,"100,000",256,2007,2007,2013,Yemen,"21,282,515",FALSE,chill
+Afghan Resistance,0.47%,TRUE,"62,500",3,1979,1979,1988,Afghanistan,"13,411,056",FALSE,chill
+Chad rebels,0.46%,FALSE,"31,150",54,1994,1994,1998,Chad,"6,781,053",FALSE,chill
+Anti-PRI,0.44%,TRUE,"344,600",25,1986,1986,2000,Mexico,"77,599,098",FALSE,chill
+Zimbabwe African People's Union,0.43%,FALSE,"26,001",250,1974,1974,1979,Zimbabwe,"6,085,074",FALSE,chill
+People Power III,0.43%,FALSE,"340,000",279,2001,2001,2001,Philippines,"79,672,873",FALSE,chill
+Bangla Independence Campaign,0.42%,TRUE,"250,000",40,1971,1971,1971,Pakistan,"59,734,481",FALSE,chill
+Belarus Pro-Democracy Campaign,0.42%,FALSE,"40,000",39,2006,2006,2013,Belarus,"9,604,924",FALSE,chill
+Saffron Revolution,0.40%,FALSE,"200,000",273,2007,2007,2008,Myanmar,"49,621,475",FALSE,chill
+South Korea Student Revolution,0.40%,TRUE,"100,000",214,1960,1960,1960,South Korea,"25,012,374",FALSE,chill
+Kurdish Secession against Saddam,0.39%,FALSE,"60,000",121,1985,1985,1993,Iraq,"15,555,800",FALSE,chill
+Tutsi rebels,0.34%,TRUE,"25,000",235,1990,1990,1994,Rwanda,"7,288,882",FALSE,chill
+NLA Insurgency,0.34%,FALSE,"7,000",435,2001,2001,2001,Macedonia,"2,042,842",FALSE,chill
+SPLA-Garang faction,0.34%,FALSE,"55,000",187,1983,1983,2005,Sudan,"16,107,620",FALSE,chill
+Muslim Brotherhood,0.34%,FALSE,"30,000",141,1980,1980,1982,Syria,"8,930,774",FALSE,chill
+Pro-Aristide Campaign,0.33%,FALSE,"30,000",338,2005,2005,2011,Haiti,"9,195,288",FALSE,chill
+Anti-Somoza Strikes,0.32%,FALSE,"10,000",276,1978,1978,1978,Nicaragua,"3,077,866",FALSE,chill
+Hutu Nationalist Insurgency,0.32%,FALSE,"19,000",403,1996,1996,2001,Rwanda,"6,013,107",FALSE,chill
+Ogoni movement,0.32%,FALSE,"300,001",158,1990,1990,1995,Nigeria,"95,212,450",FALSE,chill
+Anti-Banda,0.31%,TRUE,"30,000",8,1992,1992,1993,Malawi,"9,685,973",FALSE,chill
+Anti-Musharraf Campaign (Lawyer's Movement),0.30%,TRUE,"500,000",304,2007,2007,2008,Pakistan,"167,808,105",FALSE,chill
+Popular Democratic Army (UTO),0.29%,FALSE,"16,000",174,1992,1992,1997,Tajikistan,"5,502,494",FALSE,chill
+Anti-Khmer Rouge,0.29%,TRUE,"20,000",22,1978,1978,1979,Cambodia,"6,957,265",FALSE,chill
+Taliban Resistance,0.28%,FALSE,"60,001",217,2001,2001,2013,Afghanistan,"21,606,988",FALSE,chill
+Anti-Coalition Government Campaign,0.28%,TRUE,"2,000",426,1987,1987,1987,Fiji,"721,783",FALSE,chill
+Dance With Me Campaign,0.28%,FALSE,"20,000",290,2013,2013,2013,Bulgaria,"7,265,115",FALSE,chill
+Kurdish civil conflict,0.26%,FALSE,"55,000",110,1996,1996,1996,Iraq,"20,783,073",FALSE,chill
+Anti-Erdogan,0.26%,FALSE,"200,001",313,2013,2013,2013,Turkey,"75,928,564",FALSE,chill
+Anti-Suharto,0.25%,TRUE,"500,000",29,1996,1996,1998,Indonesia,"199,901,228",FALSE,chill
+Salvadoran Civil Conflict,0.24%,TRUE,"10,500",191,1977,1977,1992,El Salvador,"4,338,458",FALSE,chill
+South Sudanese Civil War,0.24%,FALSE,"25,000",322,2013,2013,2013,South Sudan,"10,355,036",FALSE,chill
+Niger Anti-Military,0.24%,TRUE,"20,000",151,1991,1991,1992,Niger,"8,288,735",FALSE,chill
+Dniestr,0.24%,FALSE,"8,834",69,1992,1992,1992,Moldova,"3,706,000",FALSE,chill
+Patriotic Front,0.24%,TRUE,"14,000",168,1994,1994,1994,Rwanda,"5,936,261",FALSE,chill
+Anti-Aristide,0.23%,TRUE,"20,001",297,2002,2002,2004,Haiti,"8,754,150",FALSE,chill
+Kyrgyzstan Democratic Movement,0.23%,TRUE,"10,000",123,1990,1990,1991,Kyrgyzstan,"4,391,200",FALSE,chill
+Myanmar Regime Change Campaign,0.22%,FALSE,"51,000",406,1962,1962,1988,Myanmar/Burma,"22,697,667",FALSE,chill
+Red Shirt Campaign,0.22%,FALSE,"150,000",324,2009,2009,2011,Thailand,"66,866,839",FALSE,chill
+Pro-Ouattara Campaign,0.22%,TRUE,"45,000",293,2010,2010,2011,Cote d'Ivoire,"20,532,950",FALSE,chill
+Democracy Movement,0.21%,FALSE,"2,000,000",66,1976,1976,1979,China,"930,685,000",FALSE,chill
+Anti-Zia al-Haq,0.21%,FALSE,"200,001",278,1986,1986,1986,Pakistan,"95,215,378",FALSE,chill
+Armenians in Nagorno-Karabakh,0.21%,FALSE,"15,000",35,1991,1991,1994,Azerbaijan,"7,271,000",FALSE,chill
+Tigrean Self-Determination Campaign,0.21%,TRUE,"70,000",229,1978,1978,1991,Ethiopia,"33,993,301",FALSE,chill
+Russia pro-dem movement,0.20%,TRUE,"300,000",185,1990,1990,1991,Russia,"148,292,000",FALSE,chill
+Renamo,0.20%,FALSE,"22,500",181,1979,1979,1992,Mozambique,"11,341,402",FALSE,chill
+Front for the Liberation of Mozambique,0.20%,TRUE,"15,000",86,1963,1963,1974,Mozambique,"7,679,458",FALSE,chill
+Anti-Ravalomanana Movement,0.19%,TRUE,"40,000",272,2009,2009,2009,Madagascar,"20,569,117",FALSE,chill
+Democratic Republic of Yemen Secessionist Movement,0.19%,FALSE,"27,500",412,1994,1994,1994,Yemen,"14,297,613",FALSE,chill
+Eritrean-led rebels,0.19%,TRUE,"60,000",76,1974,1974,1991,Ethiopia,"31,861,352",FALSE,chill
+Swaziland Anti-Monarchy Protests,0.19%,FALSE,"2,001",281,2011,2011,2011,Swaziland,"1,072,032",FALSE,chill
+Anti-Islamist Government Protests,0.18%,FALSE,"20,000",312,2013,2013,2013,Tunisia,"10,952,951",FALSE,chill
+Second JVP Insurrection,0.18%,FALSE,"30,000",393,1987,1987,1990,Sri Lanka,"16,643,952",FALSE,chill
+Tiananmen,0.18%,FALSE,"2,000,000",226,1989,1989,1989,China,"1,118,650,000",FALSE,chill
+"Second Congo War (MLC, RCD)",0.18%,FALSE,"80,154",410,1998,1998,2002,Democratic Republic of Congo,"44,849,967",FALSE,chill
+Anti-Doe rebels,0.17%,TRUE,"3,500",14,1989,1989,1990,Liberia,"2,106,431",FALSE,chill
+NCCOP Pro-Democracy Movement,0.16%,FALSE,"20,001",259,1991,1991,1991,Cameroon,"12,137,912",FALSE,chill
+Anti-Indira Campaign,0.16%,TRUE,"1,000,001",267,1974,1974,1977,India,"608,802,600",FALSE,chill
+Leftist rebels (URNG),0.16%,FALSE,"7,000",133,1961,1961,1996,Guatemala,"4,336,143",FALSE,chill
+JVP,0.16%,FALSE,"20,000",108,1971,1971,1971,Sri Lanka,"12,747,821",FALSE,chill
+National Resistance Army,0.16%,TRUE,"20,000",145,1981,1981,1986,Uganda,"12,825,082",FALSE,chill
+Anti-Thaksin,0.15%,TRUE,"100,000",30,2005,2005,2006,Thailand,"65,416,189",FALSE,chill
+Anya Nya,0.15%,FALSE,"12,000",31,1962,1962,1972,Sudan,"8,004,121",FALSE,chill
+South Kordofan and Blue Nile ,0.15%,FALSE,"52,000",402,2011,2011,2013,Sudan,"35,349,681",FALSE,chill
+PMIC/New Forces,0.15%,FALSE,"25,000",162,2002,2002,2005,Ivory Coast,"17,231,539",FALSE,chill
+Anti-Bhutto,0.14%,TRUE,"100,000",277,1977,1977,1977,Pakistan,"70,958,169",FALSE,chill
+First Hutu Rebellion,0.14%,FALSE,"5,000",81,1972,1972,1973,Burundi,"3,569,666",FALSE,chill
+Moro National Liberation Front,0.14%,FALSE,"50,000",139,1970,1970,2013,Philippines,"35,803,594",FALSE,chill
+Indo-Fijian Anti-Coup Campaign,0.14%,FALSE,"1,000",263,1987,1987,1987,Fiji,"721,783",FALSE,chill
+Somali Civil War,0.14%,FALSE,"10,000",357,1991,1991,2000,Somalia,"7,274,030",FALSE,chill
+Somalia militia insurgencies,0.14%,TRUE,"10,000",209,1993,1993,1994,Somalia,"7,315,865",FALSE,chill
+Tupamaros,0.13%,FALSE,"3,500",234,1963,1963,1972,Uruguay,"2,635,126",FALSE,chill
+Protest for Constitutional Reform,0.13%,FALSE,"10,000",320,2011,2011,2013,Jordan,"7,663,131",FALSE,chill
+Dominican leftists,0.13%,FALSE,"5,000",70,1965,1965,1965,Dominican Republic,"3,877,765",FALSE,chill
+Popular Movement for the Liberation of Angola,0.13%,TRUE,"7,000",176,1961,1961,1974,Angola,"5,531,472",FALSE,chill
+Revolutionary Armed Forces of Colombia and National Liberation Army,0.13%,FALSE,"23,000",182,1964,1964,2013,Colombia,"18,175,185",FALSE,chill
+Republic of Western Bosnia,0.12%,FALSE,"5,000",369,1993,1993,1995,Bosnia-Herzegovina,"4,078,937",FALSE,chill
+Yemen leftists,0.12%,FALSE,"12,000",245,1986,1986,1986,Yemen People's Republic,"9,941,109",FALSE,chill
+Poland Worker uprising,0.12%,TRUE,"40,000",173,1976,1976,1976,Poland,"34,356,300",FALSE,chill
+"Anti-Sassou-Nguessou Campaign (Cocoyes, Ninjas, Ntsiloulous)",0.10%,FALSE,"3,000",397,1997,1997,2003,Congo,"2,867,280",FALSE,chill
+Bangladesh Anti-Ershad,0.10%,TRUE,"100,000",37,1987,1987,1990,Bangladesh,"95,671,163",FALSE,chill
+Biafrans,0.10%,FALSE,"50,500",42,1967,1967,1970,Nigeria,"52,342,233",FALSE,chill
+Kyrgyz Second Revolution,0.09%,TRUE,"5,000",269,2010,2010,2010,Kyrgyzstan,"5,447,900",FALSE,chill
+Somali rebels (Ogaden),0.09%,FALSE,"30,000",207,1976,1976,1983,Ethiopia,"33,128,149",FALSE,chill
+Katanga-led leftists,0.09%,FALSE,"13,500",116,1960,1960,1965,Democratic Republic of Congo,"15,248,251",FALSE,chill
+Third Balochistan Separatist Movement,0.09%,FALSE,"55,000",36,1973,1973,1977,Pakistan,"63,099,406",FALSE,chill
+Ivorian Pro-Democracy,0.09%,TRUE,"10,000",292,1989,1989,1990,Cote d'Ivoire,"11,502,449",FALSE,chill
+Islamic State,0.09%,FALSE,"17,000",356,2013,2013,2013,Syria,"19,584,274",FALSE,chill
+Former Rebel Leaders,0.08%,FALSE,"9,000",82,1962,1962,1963,Algeria,"11,619,828",FALSE,chill
+Afghans,0.07%,TRUE,"10,000",4,1978,1978,1978,Afghanistan,"13,341,198",FALSE,chill
+Awami League Protests,0.07%,TRUE,"100,001",288,2004,2004,2007,Bangladesh,"136,986,432",FALSE,chill
+"Anti-Putin/ ""Snow Revolution""",0.07%,FALSE,"100,000",335,2010,2010,2013,Russia,"142,849,449",FALSE,chill
+Anti-Ceaucescu Movement,0.07%,FALSE,"16,000",253,1987,1987,1987,Romania,"22,949,430",FALSE,chill
+Bougainville Revolt,0.07%,FALSE,"3,000",45,1988,1988,1998,Papua New Guinea,"4,399,324",FALSE,chill
+Watusi,0.07%,FALSE,"2,001",241,1961,1961,1964,Rwanda,"2,998,325",FALSE,chill
+New People's Army,0.07%,FALSE,"25,200",150,1972,1972,2013,Philippines,"37,923,396",FALSE,chill
+LRA,0.07%,FALSE,"10,000",124,1986,1986,2013,Uganda,"15,070,302",FALSE,chill
+Somali Islamist Insurgency,0.07%,FALSE,"7,000",344,2006,2006,2013,Somalia,"10,763,905",FALSE,chill
+PF-ZAPU guerillas,0.06%,FALSE,"5,000",161,1982,1982,1987,Zimbabwe,"7,958,241",FALSE,chill
+JEM/SLA,0.06%,FALSE,"18,000",107,2003,2003,2012,Sudan,"29,460,519",FALSE,chill
+Mohajir,0.06%,FALSE,"70,000",136,1994,1994,1995,Pakistan,"120,362,762",FALSE,chill
+Cameroon anti-Ahidjo government movement,0.06%,FALSE,"3,000",413,1960,1960,1964,Cameroon,"5,176,918",FALSE,chill
+Shiite rebellion,0.06%,FALSE,"10,001",200,1991,1991,1991,Iraq,"17,889,459",FALSE,chill
+Anti-Deby Rebellion (Chad),0.05%,FALSE,"5,500",433,2005,2005,2010,Chad,"10,096,633",FALSE,chill
+Thai communist rebels,0.05%,FALSE,"17,000",221,1966,1966,1981,Thailand,"32,789,130",FALSE,chill
+First Southern Ossetian Separatist Campaign,0.05%,FALSE,"2,500",392,1991,1991,1992,Georgia,"4,835,900",FALSE,chill
+West Papuan self-determination campaign,0.05%,FALSE,"50,000",242,1964,1964,2013,Indonesia,"97,596,733",FALSE,chill
+Iranian Mujahideen,0.05%,FALSE,"20,000",103,1981,1981,1982,Iran,"40,199,906",FALSE,chill
+SCIRI,0.05%,FALSE,"8,000",388,1989,1989,1996,Iraq,"16,994,948",FALSE,chill
+Kabila-ADFL,0.05%,TRUE,"20,000",112,1996,1996,1997,Democratic Republic of Congo,"42,757,243",FALSE,chill
+Sendero Luminoso (The Shining Path) Senderista Insurgency,0.05%,FALSE,"8,000",195,1980,1980,2012,Peru,"17,547,610",FALSE,chill
+Anti-Al-Bashir Government,0.05%,FALSE,"16,000",323,2011,2011,2013,Sudan,"35,349,681",FALSE,chill
+Casamance Conflict,0.04%,FALSE,"2,500",386,1982,1982,2013,Senegal,"5,909,739",FALSE,chill
+2006 Lebanon War,0.04%,FALSE,"2,000",394,2006,2006,2006,Lebanon,"4,759,753",FALSE,chill
+Second Balochistan Separatist Movement,0.04%,FALSE,"19,800",373,1962,1962,1969,Pakistan,"47,198,878",FALSE,chill
+NDF,0.04%,FALSE,"3,000",389,1979,1979,1982,Yemen (North Yemen),"7,669,694",FALSE,chill
+Second Hutu Rebellion,0.04%,FALSE,"2,001",192,1988,1988,1988,Burundi,"5,168,698",FALSE,chill
+Poland Anti-Communist II,0.04%,FALSE,"12,000",172,1970,1970,1970,Poland,"32,664,300",FALSE,chill
+Kyrgyz Anti-Interim Goverment ,0.04%,FALSE,"2,000",300,2010,2010,2010,Kyrgyzstan,"5,447,900",FALSE,chill
+Tauregs,0.04%,FALSE,"3,001",220,1989,1989,1995,Mali,"8,296,915",FALSE,chill
+Poland Anti-Communist I,0.03%,FALSE,"10,001",171,1968,1968,1968,Poland,"32,294,655",FALSE,chill
+People's Alliance for Democracy Campaign,0.03%,TRUE,"20,001",284,2008,2008,2008,Thailand,"66,530,984",FALSE,chill
+Civil Movement for Democracy,0.03%,FALSE,"20,001",308,2013,2013,2013,Thailand,"68,144,501",FALSE,chill
+Anti-Chiluba,0.03%,TRUE,"3,000",12,2001,2001,2001,Zambia,"10,692,193",FALSE,chill
+Anti-Abdelaziz Bouteflika Campaign,0.03%,FALSE,"10,000",317,2010,2010,2012,Algeria,"35,977,455",FALSE,chill
+KDPI,0.03%,FALSE,"10,000",111,1979,1979,1996,Iran,"37,237,137",FALSE,chill
+Anti-Mutharika,0.03%,TRUE,"4,000",302,2011,2011,2012,Malawi,"14,962,112",FALSE,chill
+Al Qaeda in the Arabian Peninsula,0.03%,FALSE,"6,001",341,2009,2009,2013,Yemen,"22,516,460",FALSE,chill
+Anti-Arap Moi,0.03%,TRUE,"6,000",7,1990,1990,1991,Kenya,"23,724,579",FALSE,chill
+CAR multiple factions,0.02%,FALSE,800,49,1996,1996,1997,Central African Republic,"3,308,233",FALSE,chill
+Kurdish rebellion (Turkey),0.02%,FALSE,"10,000",251,1978,1978,2013,Turkey,"42,039,992",FALSE,chill
+"
+Peoples’ Alliance for Freedom and Democracy",0.02%,FALSE,"12,000",382,1992,1992,2012,Ethiopia,"51,423,585",FALSE,chill
+Anti-Military Government Campaign,0.02%,TRUE,"15,000",283,2007,2007,2007,Thailand,"66,182,067",FALSE,chill
+Pro-Morsi Protests,0.02%,FALSE,"20,001",295,2013,2013,2013,Egypt,"88,404,640",FALSE,chill
+RFDG,0.02%,FALSE,"1,800",348,2000,2000,2001,Guinea,"8,240,730",FALSE,chill
+Shanti Bahini,0.02%,FALSE,"15,000",198,1976,1976,1997,Bangladesh,"71,652,381",FALSE,chill
+GAM,0.02%,FALSE,"27,000",87,1976,1976,2005,Indonesia,"133,966,941",FALSE,chill
+ERP/ Monteneros,0.02%,FALSE,"5,000",72,1973,1973,1977,Argentina,"25,056,478",FALSE,chill
+MDJT,0.02%,FALSE,"1,500",363,1998,1998,2003,Chad,"7,770,048",FALSE,chill
+ADF Insurgency,0.02%,FALSE,"4,000",427,1996,1996,2013,Uganda,"21,032,821",FALSE,chill
+Pakistan Pro-Democracy Movement,0.02%,FALSE,"15,000",163,1983,1983,1983,Pakistan,"86,285,935",FALSE,chill
+MFDC Secessionist Campaign (Casamance),0.02%,FALSE,999,305,1982,1982,1983,Senegal,"5,909,739",FALSE,chill
+Chechen separatists,0.02%,FALSE,"25,000",55,1994,1994,2007,Russia,"148,336,000",FALSE,chill
+Kifaya,0.01%,FALSE,"10,000",118,2003,2003,2005,Egypt,"72,826,097",FALSE,chill
+Nigerian Muslim fundamentalists,0.01%,FALSE,"10,000",154,1980,1980,1984,Nigeria,"73,423,633",FALSE,chill
+Pakistani Islamist Insurgency,0.01%,FALSE,"20,000",342,2007,2007,2013,Pakistan,"167,808,105",FALSE,chill
+UPA,0.01%,FALSE,"1,500",398,1987,1987,1992,Uganda,"15,612,754",FALSE,chill
+Anti-Habibie Student Protests ,0.01%,TRUE,"19,756",268,1999,1999,1999,Indonesia,"208,615,169",FALSE,chill
+Cabinda Conflict ,0.01%,FALSE,"1,100",390,1991,1991,2013,Angola,"12,248,901",FALSE,chill
+al-Gama'a al-Islamiyya,0.01%,FALSE,"5,000",384,1992,1992,1999,Egypt,"58,666,814",FALSE,chill
+Military Forces of Hugo Chavez,0.01%,FALSE,"1,400",387,1992,1992,1992,Venezuela,"20,557,683",FALSE,chill
+Russian Parliamentary Forces,0.01%,FALSE,"10,000",399,1993,1993,1993,Russia,"148,520,000",FALSE,chill
+Patani insurgency,0.01%,FALSE,"4,237",354,2004,2004,2013,Thailand,"64,995,299",FALSE,chill
+FLNC,0.01%,FALSE,"1,500",78,1977,1977,1978,Democratic Republic of Congo,"24,249,130",FALSE,chill
+Naga Insurgency (Myanmar),0.00%,FALSE,"2,000",349,1988,1988,2013,Myanmar,"40,085,651",FALSE,chill
+"Kivu Rebels (M23, APCLS, PARC-FAAL)",0.00%,FALSE,"3,000",294,2011,2011,2013,Democratic Republic of Congo,"66,755,153",FALSE,chill
+PJAK,0.00%,FALSE,"3,000",385,2005,2005,2013,Iran,"69,762,347",FALSE,chill
+Fourth Balochistan Separatist Movement,0.00%,FALSE,"5,000",375,2004,2004,2013,Pakistan,"156,664,697",FALSE,chill
+Sikh insurgency,0.00%,FALSE,"20,000",201,1984,1984,1994,India,"766,833,410",FALSE,chill
+Naxalite insurgency,0.00%,FALSE,"15,000",347,1980,1980,2013,India,"698,952,844",FALSE,chill
+Mizo Revolt,0.00%,FALSE,"10,000",135,1966,1966,1986,India,"509,631,500",FALSE,chill
+Caucasus Emirate,0.00%,FALSE,"2,001",343,2007,2007,2013,Russia,"142,805,088",FALSE,chill
+Kashmiri Muslim separatists,0.00%,FALSE,"10,000",115,1990,1990,2013,India,"873,277,798",FALSE,chill
+Sinai Insurgency,0.00%,FALSE,"1,000",319,2013,2013,2013,Egypt,"88,404,640",FALSE,chill
+Tupac Amaru Revolutionary Movement (MRTA) - Senderista Insurgency,0.00%,FALSE,250,233,1996,1996,1997,Peru,"24,753,824",FALSE,chill
+IRA,0.00%,FALSE,500,97,1968,1968,1998,UK,"55,211,700",FALSE,chill
+Manipur Insurgency,0.00%,FALSE,"4,200",379,1979,1979,2013,India,"682,995,354",FALSE,chill
+Naxalite rebellion,0.00%,FALSE,"3,001",148,1967,1967,1971,India,"520,400,576",FALSE,chill
+Assam Independence Campaign,0.00%,FALSE,"4,000",351,1985,1985,2013,India,"784,360,008",FALSE,chill
+Bodoland Independence Campaign,0.00%,FALSE,"3,501",352,1987,1987,2013,India,"819,682,102",FALSE,chill
+Tripuri nationalists,0.00%,FALSE,"2,500",374,1989,1989,2013,India,"855,334,678",FALSE,chill
+Boko Haram,0.00%,FALSE,51,334,2009,2009,2013,Nigeria,"154,324,933",FALSE,chill
