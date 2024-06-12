@@ -35,7 +35,82 @@ The next step is to change the data type of the variables to numeric when needed
 Since, I had more than 100 distinct countries in the location column and creating this many dummy variables is not feasible or helps us explain our research question, I decided to assign them each to their respective continent.
 This was done with the "countrycodes" package. There were five locations that could not be assigned a continent unambiguously, so I investigated further and found that they were Czechoslovakia and three different versions of Yemen. Czechoslovakia was assigned Europe, and all the Yemens got Asia. 
 
+```{r}
+#| echo: false
+#| message: false
+#| include: false
+
+
+# laoding and preparing the data
+data <- read.csv("protests.csv",header = TRUE,skip = 1)
+# chaniging treu false to 0,1
+data[which(data$Success. == FALSE),"Success."] <- 0
+data[which(data$Success. == TRUE),"Success."] <- 1
+
+data[which(data$greater.than.3.5..of.pop.involved. == FALSE),"greater.than.3.5..of.pop.involved."] <- 0
+data[which(data$greater.than.3.5..of.pop.involved. == TRUE),"greater.than.3.5..of.pop.involved."] <- 1
+
+data[which(data$Problem. == "chill"),"Problem."] <- 0
+data[which(data$Problem. == "PROBLEM"),"Problem."] <- 1
+
+# bringing the variables into the right format (mostly datatype)
+data$participants.as...population <- gsub("%","",data$participants.as...population)
+data$participants.as...population <- as.double(data$participants.as...population)
+
+data$MAX.of.participants <- gsub(",","",data$MAX.of.participants)
+data$MAX.of.participants <- as.numeric(data$MAX.of.participants)
+
+data$Pop.in.that.year <- gsub(",","",data$Pop.in.that.year)
+data$Pop.in.that.year <- as.numeric(data$Pop.in.that.year)
+
+data$Problem. <- as.numeric(data$Problem.)
+
+# grouping countrie into continents
+library(countrycode)
+
+data$continent <- countrycode(data$Location,"country.name","continent")
+data$continent[which(data$Location == "Czechoslovakia")] <- "Europe"
+data$continent[which(is.na(data$continent))] <- "Asia" # 3 different Yemens
+data$continent <- as.factor(data$continent)
+
+# renaming the columns
+names <- c("campaign","population_involved","success","max_participants","ID","year_max_involvement","first_year","last_year","location","pop_during_height", "more_than_3.5_involved","violent","continent")
+colnames(data) <- names
+
+# creating a "duration" variable instead of 3 variables representing years
+data$duration <- data$last_year-data$first_year +1
+```
+
+
+The last step I took, was creating a variable `duration` which stores the length of each campaign in years.
+
 To conclude this first step in processing and transformation I renamed the column of the data set to be easier to use.
+
+Now it is time for more transformations, based on looking at the distribution of the data, but first let's take a look at the scatter plot matrix of the data.
+
+```{r}
+#| echo: false
+pairs(data[,-c(1,9)])
+```
+
+Even in this small format it can be seen that all variables including population metrics have a few data points stretching out far from the rest, while most are crowded together at low values, so I create histograms of them to examine further.
+```{r}
+par(mfrow=c(3,1))
+
+hist(data$population_involved)
+hist(data$max_participants)
+hist(data$pop_during_height)
+```
+After log transformation the data will be more distinguished in a smaller interval, which can be seen in the following histograms. 
+```{r}
+par(mfrow=c(3,1))
+data$population_involved <- sqrt(data$population_involved)
+data$max_participants <- log2(data$max_participants)
+data$pop_during_height <- log2(data$pop_during_height)
+hist(data$population_involved)
+hist(data$max_participants)
+hist(data$pop_during_height)
+```
 
 
 # a full model and looking at submodels
