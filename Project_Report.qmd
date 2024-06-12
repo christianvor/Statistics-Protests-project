@@ -8,9 +8,34 @@ author: "Chrsitian Vorhauser"
 
 The dataset I chose for my project includes 300 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
 
-The variables available for each of the campaigns include the participation of the population in percent and the absolute number of participants during the height of it.
+The variables available for each of the campaigns include the participation of the population in percent and the absolute number of participants during the height of it. For some campaigns we have participation rates of less than 0.01% of the population all the way up 128%. This can be the case when people from a different, mainly neighboring, country take part in the campaign and are thus counted towards this number. Since the campaign is only concerning a single country it is possible to achieve values of this magnitude.
+
+The next column is an identifier, which bears no information for us and we thus disregard it. 
+
+Following this, three columns regarding the time of the campaign are listed. The beginning year, the ending year and the year when it was at it's height, meaning the highest number of participants were recorded. As mentioned before we have years ranging from 1960 to 2013, with many taking place either in the time frame 1987-1992, or between 2009-2013. The earlier period can most likely be associated with the fall of the USSR around 1991 where many countries gained their independence. I assume a higher number of campaigns during that time, as the people protested against certain parties, which would have taken control, or be part of the fall itself by campaigning against the USSR government.
+The second period could show this increase due to the "Arab Spring" in the early 2010s where many countries in the middle east and northern Africa revolted against the (authoritarian) government. This can also explain the end of many campaigns in 2013 as the "official" end of it was December 2012 (according to Wikipedia). 
+
+To support the theories postulated in the above paragraph, the next column gives us the location of the campaign, which reveals to us that, indeed these two events caused a spike in campaigns during the mentioned time periods. Since quite a number of countries split or got created in the 50+ years our data spans, we need to make sure that, when analyzing it later we treat them correctly regarding continent they are on, since some libraries will not have former countries in their database.
+
+Coming back to a population metric, the next variable is the population in the concerned country during the height of the campaign. This is also the number of citizens used when calculating the participation in terms of population mentioned beforehand. 
+
+Lastly, we columns concerned with, on one hand, if more than 3.5% of the population were engaged in the campaign, and on the other hand, whether the protest was peaceful, or violent. The last one is encoded as "chill" and "PROBLEM" in the original data. For a protest to violent there have to have been physically injured people, it does not matter whether they are on the side of the participants, government/police/military, or the civilian population. 
+
+Coming to the research question I will try to answer: Is violence a significant component to the success of a campaign, or are other factors more influential? Other factors present in the data set that could have an influence are the number of people participating, the share of the population they make up, the duration of the campaign or the location of it.
 
 # describing the data processing and changes i made
+
+To make the data suitable to work with there were some changes to be made. First of all the categorical variables need to be changed to 0/1 encoding. For the singular variables this means:
+- A successful campaign is 1, unsuccessful 0
+- More than 3.5% involved is 1, less is 0
+- A violent campaign is 1, a peaceful one 0
+
+The next step is to change the data type of the variables to numeric when needed. For the participation in percent this means removing the percentage sign ("%") from the string and then converting to numeric. For the population numbers the "," had to be removed, since R uses "." for decimal and nothing for separation of thousands. Afterwards, the conversion to numerics was possible.
+
+Since, I had more than 100 distinct countries in the location column and creating this many dummy variables is not feasible or helps us explain our research question, I decided to assign them each to their respective continent.
+This was done with the "countrycodes" package. There were five locations that could not be assigned a continent unambiguously, so I investigated further and found that they were Czechoslovakia and three different versions of Yemen. Czechoslovakia was assigned Europe, and all the Yemens got Asia. 
+
+To conclude this first step in processing and transformation I renamed the column of the data set to be easier to use.
 
 
 # a full model and looking at submodels
