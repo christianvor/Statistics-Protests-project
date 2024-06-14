@@ -4,6 +4,14 @@ subtitle: "Protests"
 author: "Chrsitian Vorhauser"
 ---
 
+```{r}
+#| echo: false
+#| message: false
+library(car)
+library(tidyverse)
+library(countrycode)
+```
+
 # Describing the data and and what to do
 
 The dataset I chose for my project includes 300 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
@@ -66,7 +74,6 @@ data$Pop.in.that.year <- as.numeric(data$Pop.in.that.year)
 data$Problem. <- as.numeric(data$Problem.)
 
 # grouping countrie into continents
-library(countrycode)
 
 data$continent <- countrycode(data$Location,"country.name","continent")
 data$continent[which(data$Location == "Czechoslovakia")] <- "Europe"
@@ -104,16 +111,90 @@ hist(data$pop_during_height)
 After log transformation the data will be more distinguished in a smaller interval, which can be seen in the following histograms. 
 ```{r}
 par(mfrow=c(3,1))
-data$population_involved <- sqrt(data$population_involved)
-data$max_participants <- log2(data$max_participants)
-data$pop_during_height <- log2(data$pop_during_height)
-hist(data$population_involved)
-hist(data$max_participants)
-hist(data$pop_during_height)
+#data$population_involved <- sqrt(data$population_involved)
+#data$max_participants <- log2(data$max_participants)
+#data$pop_during_height <- log2(data$pop_during_height)
+hist(log2(data$population_involved))
+hist(log2(data$max_participants))
+hist(log2(data$pop_during_height))
 ```
 
 
 # a full model and looking at submodels
+
+I choose `success`as my response variabel and violent as the main covariate I want to investigate. In addition I keep population involved, max_participants, year_max_involvement, pop_during_height, the continents and the duration. I also use all interaction terms with the `violent` variable.
+The model summary looks as follows.
+```{r}
+data_mod <- data[,c(2,3,4,6,10,12,13,14)]
+
+logit_full <- glm(success~violent*.,data = data_mod, family = binomial)
+summary(logit_full)
+```
+```{r}
+Anova(logit_full)
+logit_v2 <- glm(success~violent+.+log2(max_participants)+log2(pop_during_height),data = data_mod, family = binomial)
+```
+
+```{r}
+anova(logit_full,logit_v2,test="LRT")
+```
+```{r}
+data_mod$residuals <- rstandard(logit_full)
+data_mod2 <- data_mod
+data_mod <- data_mod[,-9]
+data_mod2$continent <-  as.double(data_mod$continent)
+data_mod2$pop_during_height <- log2(data_mod$pop_during_height)
+data_mod2$max_participants <- log2(data_mod$max_participants)
+data_mod2$population_involved <- log2(data_mod$population_involved)
+data_mod2[which(data_mod2$population_involved == "-Inf"),"population_involved"] <- -7
+data_long <- data_mod2 %>%
+  pivot_longer(cols = -residuals, names_to = "variable", values_to = "value")
+
+# Create the plot
+ggplot(data_long, aes(x = value, y = residuals)) + 
+  geom_point() + 
+  geom_smooth() + 
+  facet_wrap(~variable, scales = "free") +
+  theme_minimal() +
+  labs(x = "Name", y = "Value", title = "Multiple Plots for Each Variable")
+```
+```{r}
+logit_v3 <- glm(success~violent+.+log2(pop_during_height)+log2(max_participants)-continent,data=data_mod,family = binomial)
+summary(logit_v3)
+```
+```{r}
+anova(logit_full,logit_v3,test="LRT")
+logit_v4 <- glm(success~.-violent,data = data_mod,family=binomial)
+anova(logit_full,logit_v4,test = "LRT")
+```
+```{r}
+#| warning: false
+#Anova(logit_v4)
+logit_v5 <- glm(success~duration*.+log2(pop_during_height)+log2(max_participants), data= data_mod,family=binomial)
+Anova(logit_v5)
+#summary(logit_v5)
+```
+```{r}
+#| warning: false
+logit_v6 <- glm(success~duration*(.-continent)-duration:violent-duration:max_participants-duration:pop_during_height-duration:population_involved+log2(pop_during_height)+log2(max_participants),data = data_mod,family = binomial)
+anova(logit_v5,logit_v6,type="LRT")
+Anova(logit_v6)
+```
+```{r}
+summary(logit_v6)
+summary(logit_v5)
+```
+
+## cross validation?
+
+```{r}
+library(caret)
+
+train_control <- trainControl(method="cv",number = 10)
+model <- train(success~duration*(.-continent)-duration:violent-duration:max_participants-duration:pop_during_height-duration:population_involved+log2(pop_during_height)+log2(max_participants), data = data_mod,trControl = train_control, method = "glm", family=binomial())
+
+summary(model)
+```
 
 
 # diagnostics of the model
