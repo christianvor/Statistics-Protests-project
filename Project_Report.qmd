@@ -1,12 +1,28 @@
 ---
 title: "Project Report Statistics"
-subtitle: "Protests"
-author: "Chrsitian Vorhauser"
+subtitle: "Protests and Campaigns"
+author: "Christian Vorhauser"
+#format: html-notebook
+#editor: visual
+title-block-banner: "#990000"
+title-block-banner-color: "white"
+format: 
+  html-notebook:
+    embed-resources: true
+    smooth-scroll: true
+    theme: cosmo
+    fontcolor: black
+    toc: true
+    toc-location: left
+    toc-title: Table of Contents
+    toc-depth: 3
+css: style.css
 ---
 
 ```{r}
 #| echo: false
 #| message: false
+#| warning: false
 library(car)
 library(tidyverse)
 library(countrycode)
@@ -96,15 +112,19 @@ To conclude this first step in processing and transformation I renamed the colum
 
 Next we look at some variables which might be a good choice for a log transformation, namely `population_involved`, `max_participants` and `pop_during_height`. As can be seen there is a very large skew in them so a transformation makes sense.
 ```{r}
+#| echo: false
 par(mfrow=c(3,1))
 
 hist(data$population_involved)
 hist(data$max_participants)
 hist(data$pop_during_height)
 ```
-After the transformation the data looks the following. There is only one problem: when transforming the population involved we will get "-Inf" values as there are some which constitute less than 0.01% of the population, thus being 0, and the log2(0) not being defined. I try to create a dummy variable `pop_inv_zero` which is 1 if the value is "-Inf" and change the value in the log transformed `population_involved` to 0. This should, if my memory serves me correctly, follow the example given in class to deal with this behaviour.
+After the transformation the data looks the following. There is only one problem: when transforming the population involved we will get "-Inf" values as there are some which constitute less than 0.01% of the population, thus being 0, and the log2(0) not being defined. I try to create a dummy variable `pop_inv_zero` which is 1 if the value is "-Inf" and change the value in the log transformed `population_involved` to 0. This should, if my memory serves me correctly, follow the example given in class to deal with this behavior.
+
 ```{r}
+#| echo: false
 par(mfrow=c(3,1))
+
 
 hist(log2(data$population_involved))
 hist(log2(data$max_participants))
@@ -124,8 +144,11 @@ I choose `success`as my response variable and `violent` as the main covariate I 
 
 The model summary for the full model with interactions on violent is given as follows:
 ```{r}
-##| message: false
+#| echo: false
+#| message: false
+#| warning: false
 data_mod <- data[,c(2,3,4,6,10,12,13,14,15)]
+
 
 logit_full <- glm(success~violent*.,data = data_mod, family = binomial)
 summary(logit_full)
@@ -135,6 +158,7 @@ Interactions do not seem to have any significance whatsoever for our analysis, w
 Using a Type 2 anova table I see that our Target variable `violent` is very significant, as are `duration` and `population_involved`.
 In the next step I remove `continent` as it shows a p-value of 0.777.
 ```{r}
+#| echo: false
 #Anova(logit_full)
 m1 <- glm(success~violent+., data = data_mod,family = binomial)
 anova(logit_full,m1,test="LRT")
@@ -142,6 +166,7 @@ anova(logit_full,m1,test="LRT")
 Anova(m1,type=2)
 ```
 ```{r}
+#| echo: false
 m2 <- glm(success~violent+.-continent,data = data_mod,family = binomial)
 anova(m1,m2,test="LRT")
 
@@ -149,9 +174,15 @@ Anova(m2)
 ```
 Before dropping any more variables I want to look at the residual plot to make sure we are not kicking a variable which only needs a transformation to be significant for our analysis.
 Residuals of all variables seem to fit very well, especially `pop_during_height` with only a small dip and the upper end of the scale, same with `year_max_involvement`. `population_involved` shows a very slight upwards trend, and `duration` a little dip around 5 and a tendency to decrease for values larger 25 years. 
-`max_participants` gets it's downwards dip at the upper end from a single observation which is why I will not try to fir another distribution to it.
+`max_participants` gets it's downwards dip at the upper end from a single observation which is why I will not try to fit another distribution to it.
+Due to the anova table suggesting it, and the summary showing no significance, I decided to drop `max_participants` as well for our final model, to make it even simpler without loosing much explainability.
 
 ```{r}
+#| warning: false
+#| message: false
+#| error: false
+
+final <- glm(success~violent+.-continent-max_participants,data=data_mod,family=binomial)
 data_mod2 <- data_mod
 data_mod2$residuals <- rstandard(final)
 data_mod2$continent <- as.numeric(data_mod$continent)
@@ -166,40 +197,68 @@ ggplot(data_long, aes(x = value, y = residuals)) +
   theme_minimal() +
   labs(x = "Name", y = "Value", title = "Multiple Plots for Each Variable")
 ```
+For the residuals we can see that they don't fit the QQ-plot perfectly with the main deviation being in the lower part and around 0. As expected, the residuals form two groups in teh histogram, although they seem to differ quite a bit.
 
 ```{r}
+#| warning: false
+#| echo: false
 hist(data_mod2$residuals,freq=F,bins=20)
+plot(final,which = c(2))
+```
+```{r}
+#| include: false
+#could not get the simulate() to return the same length of data as my data has
+
+#B <- 1000
+#Devs <- rep(0,B)
+#for(b in 1:B){
+#  newData <- data_mod
+#  newData$success <- simulate(final)
+#  newmodel <- glm(success~violent+.-continent-max_participants, data=newData, family=binomial)
+#  Devs[b] <- newmodel$deviance
+#}
+#hist(Devs,main="", xlab="deviance")
+#abline(v=final$deviance, col="red", lwd=2)
 ```
 
-Judging from this outcome I would suggest dropping `max_participants`, as suggested by the anova table, but otherwise keeping the model as is. 
+
 Surprisingly, when calling summary on the model, we see that both `violent` and `pop_inv_zero` are not at all significant, but the Anova table tells us that they are very significant and we can't drop them.
 
 ```{r}
-final <- glm(success~violent+.-continent-max_participants,data=data_mod,family=binomial)
+#| echo: false
 summary(final)
 ```
 
 # Comparison
 
-To check whetehr the model really holds up i will compare it to a stepwise model based on the AIC, and a fitted model based on the duration of the campaign instead of the violence, to see if the focus on this variable is holding back our predictive ability.
+To check whether the model really holds up I will compare it to a stepwise model based on the AIC, and a fitted model based on the duration of the campaign instead of the violence, to see if the focus on this variable is holding back our predictive ability.
+In the plots below you can see again the residuals against the variables for the model on `duration`. The plots are very similar to the ones seen before and I do not see a fitting transformation to improve the fit of it.
 
 ```{r}
+#| output: false
 stepwise <- step(logit_full,direction = "backward")
 summary(stepwise)
 ```
+
 ```{r}
+#| echo: false
+#| include: false
 dm1 <- glm(success~duration*.,data=data_mod,family=binomial)
 Anova(dm1)
 dm2 <- glm(success~duration*population_involved+.,data=data_mod,family=binomial)
 Anova(dm2)
 
+dm3 <- glm(success~duration*population_involved+.-continent-max_participants,data=data_mod,family=binomial)
+
 data_mod2 <- data_mod
-data_mod2$residuals <- rstandard(dm2)
+data_mod2$residuals <- rstandard(dm3)
 data_mod2$continent <- as.numeric(data_mod$continent)
 
 data_long <- data_mod2 %>%
   pivot_longer(cols = -residuals, names_to = "variable", values_to = "value")
-
+```
+```{r}
+#| warning: false
 ggplot(data_long, aes(x = value, y = residuals)) + 
   geom_point() + 
   geom_smooth() + 
@@ -207,35 +266,49 @@ ggplot(data_long, aes(x = value, y = residuals)) +
   theme_minimal() +
   labs(x = "Name", y = "Value", title = "Multiple Plots for Each Variable")
 
-dm3 <- glm(success~duration*population_involved+.-continent-max_participants,data=data_mod,family=binomial)
+
 summary(dm3)
 Anova(dm3)
 ```
+
+For the first comparison I use the AICc and find that the model based on `duration` outperforms the final model and the stepwise model slightly, the two of them being identical. The full model comes in last by a large margin.
 ```{r}
 AICc(final)
 AICc(dm3)
 AICc(stepwise)
+AICc(logit_full)
 ```
+I decided to use 5-Fold cross validation for the next comparison. Since I have 299 observations and a even split is not possible, I reuse one random observation form the dataset to fill it to 300. 
+After calculating the average MSE of the models we see that the final model we built actually comes out on top, followed by the duration model, the stepwise model, and lastly the full model.
 
 ```{r}
 #| inlcude: false
+#| message: false
+#| warning: false
+#| output: false
 # 5 fold CV
+set.seed(1602)
 K <- 5
-MSE <- array(0,c(3,K))
+MSE <- array(0,c(4,K))
 fold <- matrix(c(sample(1:299),sample(1:299,1)),nrow=K) # because 299 obs i recycle a single one for CV
+
+#success~duration*population_involved+.-continent-max_participants
 
 for(k in 1:K){
   train <- data_mod[-fold[k,],]
   test <- data_mod[fold[k,],]
-  final <- glm(success~violent+.-continent-max_participants,data=data_mod,family=binomial)
-  dm3 <- glm(success~duration*population_involved+.-continent-max_participants,data=data_mod,family=binomial)
+  final <- glm(success~violent+.-continent-max_participants,data=train,family=binomial)
+  dm3 <- glm(success~duration*population_involved+.-continent-max_participants,data=train,family=binomial)
+  logit_full <- glm(success~violent*.,data = train, family = binomial)
   stepwise <- step(logit_full,direction = "backward")
   pred_f <- predict(final,newdata=test,type="response")
   pred_d <- predict(dm3,newdata=test,type="response")
   pred_s <- predict(stepwise,newdata=test,type="response")
+  pred_a <- predict(logit_full,newdata = test,type="response")
   MSE[1,k] <- sum((test$success-pred_f)^2)
   MSE[2,k] <- sum((test$success-pred_d)^2)
   MSE[3,k] <- sum((test$success-pred_s)^2)
+  MSE[4,k] <- sum((test$success-pred_a)^2)
 }
 ```
 
@@ -249,53 +322,6 @@ rowMeans(MSE)
 
 
 
-```{r}
-logit_v3 <- glm(success~violent+.+log2(pop_during_height)+log2(max_participants)-continent-pop_during_height,data=data_mod,family = binomial)
-summary(logit_v3)
-Anova(logit_v3)
-```
-```{r}
-anova(logit_full,logit_v3,test="LRT")
-logit_v4 <- glm(success~.-violent,data = data_mod,family=binomial)
-anova(logit_full,logit_v4,test = "LRT")
-```
-```{r}
-#| warning: false
-#Anova(logit_v4)
-logit_v5 <- glm(success~duration*.+log2(pop_during_height)+log2(max_participants), data= data_mod,family=binomial)
-Anova(logit_v5)
-#summary(logit_v5)
-```
-```{r}
-#| warning: false
-logit_v6 <- glm(success~duration*(.-continent)-duration:violent-duration:max_participants-duration:pop_during_height-duration:population_involved+log2(pop_during_height)+log2(max_participants),data = data_mod,family = binomial)
-anova(logit_v5,logit_v6,type="LRT")
-Anova(logit_v6)
-```
-```{r}
-summary(logit_v6)
-summary(logit_v5)
-```
-
-## cross validation?
-
-```{r}
-library(caret)
-
-train_control <- trainControl(method="cv",number = 10)
-model <- train(success~duration*(.-continent)-duration:violent-duration:max_participants-duration:pop_during_height-duration:population_involved+log2(pop_during_height)+log2(max_participants), data = data_mod,trControl = train_control, method = "glm", family=binomial())
-
-summary(model)
-```
-# stepwise model for comparison
-```{r}
-stepwise_model <- step(logit_full)
-summary(stepwise_model)
-anova(stepwise_model,logit_v6,test="LRT")
-```
 
 
-# diagnostics of the model
-
-# conclusions
 
