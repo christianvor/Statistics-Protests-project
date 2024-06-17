@@ -4,7 +4,7 @@ subtitle: "Protests and Campaigns"
 author: "Christian Vorhauser"
 #format: html-notebook
 #editor: visual
-title-block-banner: "#990000"
+title-block-banner: "#42504d"
 title-block-banner-color: "white"
 format: 
   html-notebook:
@@ -29,7 +29,7 @@ library(countrycode)
 library(gamlr)
 ```
 
-# Describing the data and and what to do
+# Describing the data
 
 The dataset I chose for my project includes 300 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
 
@@ -48,7 +48,7 @@ Lastly, we columns concerned with, on one hand, if more than 3.5% of the populat
 
 Coming to the research question I will try to answer: Is violence a significant component to the success of a campaign, or are other factors more influential? Other factors present in the data set that could have an influence are the number of people participating, the share of the population they make up, the duration of the campaign or the location of it.
 
-# describing the data processing and changes i made
+# Data Processing and Transformations
 
 To make the data suitable to work with there were some changes to be made. First of all the categorical variables need to be changed to 0/1 encoding. For the singular variables this means:
 - A successful campaign is 1, unsuccessful 0
@@ -229,7 +229,7 @@ Surprisingly, when calling summary on the model, we see that both `violent` and 
 summary(final)
 ```
 
-# Comparison
+# Comparison to other models
 
 To check whether the model really holds up I will compare it to a stepwise model based on the AIC, and a fitted model based on the duration of the campaign instead of the violence, to see if the focus on this variable is holding back our predictive ability.
 In the plots below you can see again the residuals against the variables for the model on `duration`. The plots are very similar to the ones seen before and I do not see a fitting transformation to improve the fit of it.
@@ -316,8 +316,15 @@ for(k in 1:K){
 rowMeans(MSE)
 ```
 
+# Conclusion and Discussion
 
+To sum up, the final model I decided on is $$ \mathbb{E}Y_n = \beta_0 + \beta_1 \mathbb{I}_{[violent]} + \beta_2 z_1 + \beta_3 x_1 + \beta_4 z_2 + \beta_5 x_2 + \beta_6 \mathbb{I}_{[pop\_inv\_zero]}  $$
 
+Where we have Indicator functions for violence and if the population involved is below 0.01%, $x_1$ being the year of max involvement, $x_2$ the duration, $z_1$ and $z_2$ the log transformed population involved and population during the height of the campaign respectively.
+
+Even though the Anova type 2 table suggests to keep all remaining variables and places high significance on them, it is hard to interpret the model as the remaining variables are mostly not significant in the summary statistic. 
+
+All in all the fitted model does seem to perform the best out of the ones tested. What could be investigated further are interactions between variables, but from what has been seen in the anova tables and summary statistics they do not seem to hold much value for the analysis. Another aspect worth investigating could be starting from a dataset without any transformations and having a look, if we arrive at a different, maybe better model than the one we have now.
 
 
 
