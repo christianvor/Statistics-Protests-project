@@ -31,7 +31,7 @@ library(gamlr)
 
 # Describing the data
 
-The dataset I chose for my project includes 300 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
+The dataset I chose for my project includes 299 campaigns/projects from all around the world in the time frame of 1960 to 2013. The response variable is the success of the campaign, originally encoded as TRUE or FALSE. But when was a campaign successful? A protest (most often) has a clear objective behind it, be it the dismantlement of the reigning government, or convincing them to not put a law in practice. These are also the only kinds of campaigns present in the data set, and thus a success is granted by the achievement of this goal.
 
 The variables available for each of the campaigns include the participation of the population in percent and the absolute number of participants during the height of it. For some campaigns we have participation rates of less than 0.01% of the population all the way up 128%. This can be the case when people from a different, mainly neighboring, country take part in the campaign and are thus counted towards this number. Since the campaign is only concerning a single country it is possible to achieve values of this magnitude.
 
@@ -168,9 +168,11 @@ Anova(m1,type=2)
 ```{r}
 #| echo: false
 m2 <- glm(success~violent+.-continent,data = data_mod,family = binomial)
-anova(m1,m2,test="LRT")
 
-Anova(m2)
+final <- glm(success~violent+.-continent-max_participants,data=data_mod,family=binomial)
+anova(m2,final,test="LRT")
+Anova(final)
+summary(final)
 ```
 Before dropping any more variables I want to look at the residual plot to make sure we are not kicking a variable which only needs a transformation to be significant for our analysis.
 Residuals of all variables seem to fit very well, especially `pop_during_height` with only a small dip and the upper end of the scale, same with `year_max_involvement`. `population_involved` shows a very slight upwards trend, and `duration` a little dip around 5 and a tendency to decrease for values larger 25 years. 
@@ -182,7 +184,6 @@ Due to the anova table suggesting it, and the summary showing no significance, I
 #| message: false
 #| error: false
 
-final <- glm(success~violent+.-continent-max_participants,data=data_mod,family=binomial)
 data_mod2 <- data_mod
 data_mod2$residuals <- rstandard(final)
 data_mod2$continent <- as.numeric(data_mod$continent)
@@ -196,6 +197,8 @@ ggplot(data_long, aes(x = value, y = residuals)) +
   facet_wrap(~variable, scales = "free") +
   theme_minimal() +
   labs(x = "Name", y = "Value", title = "Multiple Plots for Each Variable")
+
+
 ```
 For the residuals we can see that they don't fit the QQ-plot perfectly with the main deviation being in the lower part and around 0. As expected, the residuals form two groups in teh histogram, although they seem to differ quite a bit.
 
@@ -326,7 +329,9 @@ Even though the Anova type 2 table suggests to keep all remaining variables and 
 
 All in all the fitted model does seem to perform the best out of the ones tested. What could be investigated further are interactions between variables, but from what has been seen in the anova tables and summary statistics they do not seem to hold much value for the analysis. Another aspect worth investigating could be starting from a dataset without any transformations and having a look, if we arrive at a different, maybe better model than the one we have now.
 
-
+A larger dataset would also help improve the model as the current one only includes 299 campaigns, with an even split between successful and unsuccessful, but only 12 of them were violent, which makes it difficult to have as a significant variable.
+Other than that, the most significant variable is `population_involved`, which does not seem very surprising, as the more people are campaigning the harder it is to put it down and not agree to their demands. Next up is duration, which has a negative estimate, meaning that the longer a campaign is going on for the more the log odds decrease. 
+The `year_of_max_involvement` and `pop_during_height` are almost significant, the latter I guess could be due to some colinearity with the other population metrics. 
 
 
 
